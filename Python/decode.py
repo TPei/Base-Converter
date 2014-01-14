@@ -1,4 +1,3 @@
-
 '''
 decode a number from any base to base 10
 '''
