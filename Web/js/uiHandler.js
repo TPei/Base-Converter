@@ -13,10 +13,17 @@ $(document).ready(function () {
         $('#resultConvert').text("");
         $('#convertStatus').text("");
 
-        console.log("Converting "+number+" from base "+fromBase+" to base "+toBase);
-
 
         if (number != "") {
+            for(var i = 0; i < number.toString().length; i++) {
+                var digit = parseInt(number.split('')[i]);
+                if (digit > fromBase) {
+                    $('#resultConvert').text("-");
+                    $('#convertStatus').text("Invalid numbers were entered: "+digit+" is not possible in "+fromBase+" base system!");
+                    return;
+                }
+            }
+
             var toTen = decode(number, fromBase);
             var toTarget = encode(toTen, toBase);
             $('#resultConvert').text(toTarget);
