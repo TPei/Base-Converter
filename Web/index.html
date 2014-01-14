@@ -3,6 +3,7 @@
 <head>
     <title>Base Converter</title>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/uiHandler.js"></script>
     <script type="text/javascript" src="js/convert.js"></script>
 </head>
 <body>
@@ -13,11 +14,50 @@
 		
 		<p>Converting <input type="number" id="toTen" /> from  base <input type="number" id="fromBase" /> to base 10 is: <span id="resultDecode"></span></p>
 		
-		<button id="convertButton">Convert!</button>
-	
+		<button id="codeButton">Convert!</button>
+
+        <p style="color: red;" id="status"></p>
+        <hr />
+
+        <p>
+            Converting <input type="number" id="from" /> from base
+            <select id="convertFrom">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option selected="selected">10</option>
+            </select>
+
+            to base
+
+            <select id="convertTo">
+                <option>1</option>
+                <option selected="selected">2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+
+            is: <span id="resultConvert"></span>
+        </p>
+
+        <button id="convertButton">Convert!</button>
+
+        <p style="color: red;" id="convertStatus"></p>
 	</form>
 	
-	<p style="color: red;" id="status"></p>
+
 
 </body>
 </html>
